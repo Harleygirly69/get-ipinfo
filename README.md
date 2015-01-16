@@ -13,7 +13,17 @@ $ npm install --save get-ipinfo
 ```javascript
 var IPinfo = require('get-ipinfo');
 
+/**
+ * Get your IP info
+ */
 IPinfo(function(err, ip) {
+	console.log(ip);
+});
+
+/**
+ * Get defined IP info
+ */
+IPinfo('8.8.8.8', function(err, ip) {
 	console.log(ip);
 });
 ```
