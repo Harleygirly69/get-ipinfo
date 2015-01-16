@@ -1,4 +1,4 @@
-
+'use strict';
 /**
  * get-ipinfo
  * Copyright © 2015 Johnie Hjelm

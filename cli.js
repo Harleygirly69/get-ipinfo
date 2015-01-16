@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 'use strict';
 
 var meow 		= require('meow');
@@ -7,9 +8,9 @@ var IPinfo 	= require('./');
 var cli = meow({
 	help: [
 		'',
-		'Version: ' + pkg.version + '',
-		'',
+		'Usage',
 		'  $ ipinfo',
+		'',
 		'{',
 		'  "ip": "90.111.11.111"',
 		'  "hostname": "Hostname"',
