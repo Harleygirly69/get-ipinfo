@@ -23,7 +23,7 @@ IPinfo(function(err, ip) {
 /**
  * Get defined IP info
  */
-IPinfo('8.8.8.8', function(err, ip) {
+IPinfo('1.3.3.7', function(err, ip) {
 	console.log(ip);
 });
 ```
