@@ -23,14 +23,20 @@ var cli = meow({
 		'}',
 		'',
 		'Options',
-		'  --ip   Specify an IP address'
+		'  --ip    Specify an IP address',
+		'  --type  Type of information: ip|hostname|city|region|country|loc|org|postal'
 	].join('\n')
 });
+
+/**
+ * Set flag
+ */
+var type = cli.flags.type;
 
 IPinfo(function (err, ip) {
 	if (err) {
 		throw err;
 	}
 
-	console.log(ip);
+	console.log(type ? ip[type] : ip);
 });
