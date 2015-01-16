@@ -21,8 +21,10 @@ module.exports = function (type, cb) {
 	if (typeof type === 'function') {
 		url = IPinfo.hostname + 'json';
 		cb = type;
-	} else (IPinfo.ip_regex.test(type)) {
+	} else if (IPinfo.ip_regex.test(type)) {
 		url = IPinfo.hostname + type + '/json';
+	} else {
+		return 'Something went wrong';
 	}
 
 	got('http://ipinfo.io/json', {
@@ -38,7 +40,7 @@ module.exports = function (type, cb) {
 
 		res = JSON.parse(res);
 
-		cb(type, res);
+		cb(null, res);
 
 	});
 
