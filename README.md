@@ -41,9 +41,9 @@ $ ipinfo --help
 		  "postal": "1337"
 		}
 		
-		Options
-		  --ip    Specify an IP address
-		  --type  Type of information: ip|hostname|city|region|country|loc|org|postal
+	Options
+	  --ip    Specify an IP address
+	  --type  Type of information: ip|hostname|city|region|country|loc|org|postal
 ```
 
 ## License
