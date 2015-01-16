@@ -1,12 +1,29 @@
 'use strict';
+
 /**
  * get-ipinfo
  * Copyright © 2015 Johnie Hjelm
  */
 
+// Dependencies
 var got = require('got');
 
-module.exports = function (cb) {
+// Constants
+var IPinfo = {
+	hostname: 'http://ipinfo.io/',
+	ip_regex: /^\b(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\b$/
+};
+
+module.exports = function (type, cb) {
+
+	var url = null;
+
+	if (typeof type === 'function') {
+		url = IPinfo.hostname + 'json';
+		cb = type;
+	} else (IPinfo.ip_regex.test(type)) {
+		url = IPinfo.hostname + type + '/json';
+	}
 
 	got('http://ipinfo.io/json', {
 		headers: {
@@ -21,7 +38,7 @@ module.exports = function (cb) {
 
 		res = JSON.parse(res);
 
-		cb(null, res);
+		cb(type, res);
 
 	});
 
