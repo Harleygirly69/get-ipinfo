@@ -1,13 +1,16 @@
 {
-  "name": "module-boilerplate",
+  "name": "get-ipinfo",
   "version": "1.0.0",
-  "description": "Description of module-boilerplate",
+  "description": "Get IP info using ipinfo.io",
   "license": "MIT",
-  "repository": "adroiter/module-boilerplate",
+  "repository": "adroiter/get-ipinfo",
+  "bin": {
+    "ipinfo": "cli.js"
+  },
   "author": {
-    "name": "Name of the author",
-    "email": "your@email.com",
-    "url": "http://your.url"
+    "name": "Johnie Hjelm",
+    "email": "johniehjelm@me.com",
+    "url": "http://adroiter.io"
   },
   "engines": {
     "node": ">=0.10.0"
@@ -16,10 +19,14 @@
     "test": "node test.js"
   },
   "files": [
-    "index.js"
+    "index.js",
+    "cli.js"
   ],
   "keywords": [],
-  "dependencies": {},
+  "dependencies": {
+    "got": "^2.3.0",
+    "meow": "^2.1.0"
+  },
   "devDependencies": {
     "mocha": ">=2.1.0"
   }

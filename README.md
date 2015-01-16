@@ -1,11 +1,11 @@
-# module-boilerplate
+# get-ipinfo
 
-> Text about the module
+> Get IP info using ipinfo.io
 
 ## Install
 
 ```sh
-$ npm install --save module
+$ npm install --save get-ipinfo
 ```
 
 ## Usage
@@ -14,4 +14,4 @@ Text about how to use the module
 
 ## License
 
-MIT © [name of the author](http://github.com)
+MIT © [Adroiter](http://adroiter.io)
