@@ -16,11 +16,16 @@ var IPinfo = {
 
 module.exports = function (type, cb) {
 
+  // Default
 	var url = null;
+
+  /**
+   * Wrapper for url
+   */
 
 	if (typeof type === 'function') {
 		url = IPinfo.hostname + 'json';
-		cb = type;
+    cb = type;
 	} else if (IPinfo.ip_regex.test(type)) {
 		url = IPinfo.hostname + type + '/json';
 	} else {

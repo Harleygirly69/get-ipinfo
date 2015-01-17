@@ -22,7 +22,11 @@
     "index.js",
     "cli.js"
   ],
-  "keywords": [],
+  "keywords": [
+    "ipinfo",
+    "wrapper",
+    "cli"
+  ],
   "dependencies": {
     "got": "^2.3.0",
     "meow": "^2.1.0"
