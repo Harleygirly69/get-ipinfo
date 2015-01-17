@@ -24,7 +24,7 @@ module.exports = function (type, cb) {
 	} else if (IPinfo.ip_regex.test(type)) {
 		url = IPinfo.hostname + type + '/json';
 	} else {
-		url = null;
+		url = IPinfo.hostname + 'json';
 	}
 
 	got(url, {
