@@ -27,7 +27,7 @@ module.exports = function (type, cb) {
 		return 'Something went wrong';
 	}
 
-	got('http://ipinfo.io/json', {
+	got(url, {
 		headers: {
 			'user-agent': 'https://github.com/adroiter/get-ipinfo'
 		}
