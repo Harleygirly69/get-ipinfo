@@ -28,12 +28,10 @@ var cli = meow({
   ].join('\n')
 });
 
-/**
- * Set flag
- */
+// Set flag
 var type = cli.flags.type;
 
-IPinfo(function (err, ip) {
+IPinfo(cli.flags.ip, function (err, ip) {
   if (err) {
     throw err;
   }
